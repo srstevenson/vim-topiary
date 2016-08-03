@@ -1,0 +1,57 @@
+topiary.txt* Trim excess whitespace                                   *topiary*
+
+==============================================================================
+CONTENTS                                                      *topiary-contents*
+
+    1. About ............................................|topiary-about|
+    2. Configuration ....................................|topiary-configuration|
+    3. Issues ...........................................|topiary-issues|
+    4. Licence ..........................................|topiary-licence|
+
+==============================================================================
+ABOUT                                                            *topiary-about*
+
+vim-topiary trims excess whitespace from buffers on save. Three types of
+whitespace are removed:
+
+    * trailing spaces and tabs at the end of lines
+    * blank lines at the start of the buffer
+    * blank lines at the end of the buffer
+
+Additionally, multiple consecutive blank lines are collapsed to a single blank
+line.
+
+==============================================================================
+CONFIGURATION                                            *topiary-configuration*
+
+To disable vim-topiary for specific filetypes, set `g:topiary_ft_disabled` in
+your vimrc file to a list of filetypes. By default vim-topiary is disabled in
+diff buffers:
+>
+    let g:topiary_ft_disabled = ['diff']
+<
+You may not want to collapse multiple blank lines in all filetypes. For
+example in Python top-level function and class definitions should be
+surrounded with two blank lines. In this case only three or more consecutive
+blank lines should be collapsed, and to two blank lines rather than one. You
+can specify this behaviour for specific filetypes by setting
+`g:topiary_ft_allow_two_blank_lines` in your vimrc to a list of filetypes. By
+default this is enabled in Python buffers:
+>
+    let g:topiary_ft_allow_two_blank_lines = ['python']
+<
+==============================================================================
+ISSUES                                                          *topiary-issues*
+
+Bug reports and patches are welcome on the issue tracker at
+https://github.com/srstevenson/vim-topiary/issues
+
+==============================================================================
+LICENCE                                                        *topiary-licence*
+
+Copyright © 2016 Scott Stevenson.
+
+vim-topiary is distributed under the terms of the ISC licence.
+
+==============================================================================
+vim:et:ft=help:sts=4:tw=78:

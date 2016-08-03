@@ -1,13 +1,13 @@
-" vim-trim-whitespace: trim excess whitespace
+" vim-topiary: trim excess whitespace
 " Maintainer: Scott Stevenson <scott@stevenson.io>
-" Source:     https://github.com/srstevenson/vim-trim-whitespace
+" Source:     https://github.com/srstevenson/vim-topiary
 
-if !exists('g:trim_filetypes_disabled')
-  let g:trim_filetypes_disabled = ['diff']
+if !exists('g:topiary_ft_disabled')
+  let g:topiary_ft_disabled = ['diff']
 endif
 
-if !exists('g:trim_filetypes_allow_two_blank_lines')
-  let g:trim_filetypes_allow_two_blank_lines = ['python']
+if !exists('g:topiary_ft_allow_two_blank_lines')
+  let g:topiary_ft_allow_two_blank_lines = ['python']
 endif
 
 function! s:InList(item, list)
@@ -27,7 +27,7 @@ function! s:TrimTrailingBlankLines()
 endfunction
 
 function! s:CollapseMultipleBlankLines()
-  if s:InList(&filetype, g:trim_filetypes_allow_two_blank_lines)
+  if s:InList(&filetype, g:topiary_ft_allow_two_blank_lines)
     %s/\n\{4,}/\r\r\r/e
   else
     %s/\n\{3,}/\r\r/e
@@ -35,7 +35,7 @@ function! s:CollapseMultipleBlankLines()
 endfunction
 
 function! s:TrimWhitespace()
-  if s:InList(&filetype, g:trim_filetypes_disabled)
+  if s:InList(&filetype, g:topiary_ft_disabled)
     return
   endif
 
@@ -47,7 +47,7 @@ function! s:TrimWhitespace()
   call winrestview(l:view)
 endfunction
 
-augroup trim_whitespace
+augroup topiary
   autocmd!
   autocmd BufWritePre * call s:TrimWhitespace()
 augroup END

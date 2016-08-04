@@ -2,7 +2,7 @@
 " Maintainer: Scott Stevenson <scott@stevenson.io>
 " Source:     https://github.com/srstevenson/vim-topiary
 
-if exists('g:loaded_topiary')
+if exists('g:loaded_topiary') || &compatible
   finish
 else
   let g:loaded_topiary = 1

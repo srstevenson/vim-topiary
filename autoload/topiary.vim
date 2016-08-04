@@ -28,7 +28,7 @@ endfunction
 
 function! topiary#CheckIsList(variable) abort
   if type(a:variable) != type([])
-    echo 'Error:' a:variable 'must be a list'
+    echomsg 'Error:' a:variable 'must be a list'
   endif
 endfunction
 

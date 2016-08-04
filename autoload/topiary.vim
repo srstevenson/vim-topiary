@@ -2,23 +2,23 @@
 " Maintainer: Scott Stevenson <scott@stevenson.io>
 " Source:     https://github.com/srstevenson/vim-topiary
 
-function! s:InList(item, list)
+function! s:InList(item, list) abort
   return index(a:list, a:item) >= 0
 endfunction
 
-function! s:TrimEOLWhitespace()
+function! s:TrimEOLWhitespace() abort
   %s/\s\+$//e
 endfunction
 
-function! s:TrimLeadingBlankLines()
+function! s:TrimLeadingBlankLines() abort
   %s/\%^\n\+//e
 endfunction
 
-function! s:TrimTrailingBlankLines()
+function! s:TrimTrailingBlankLines() abort
   %s/\n\+\%$//e
 endfunction
 
-function! s:CollapseMultipleBlankLines()
+function! s:CollapseMultipleBlankLines() abort
   if s:InList(&filetype, g:topiary_ft_allow_two_blank_lines)
     %s/\n\{4,}/\r\r\r/e
   else
@@ -26,7 +26,7 @@ function! s:CollapseMultipleBlankLines()
   endif
 endfunction
 
-function! topiary#TrimWhitespace()
+function! topiary#TrimWhitespace() abort
   if s:InList(&filetype, g:topiary_ft_disabled)
     return
   endif

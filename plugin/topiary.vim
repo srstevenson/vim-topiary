@@ -2,6 +2,12 @@
 " Maintainer: Scott Stevenson <scott@stevenson.io>
 " Source:     https://github.com/srstevenson/vim-topiary
 
+if exists('g:loaded_topiary')
+  finish
+else
+  let g:loaded_topiary = 1
+endif
+
 if !exists('g:topiary_ft_disabled')
   let g:topiary_ft_disabled = ['diff']
 endif

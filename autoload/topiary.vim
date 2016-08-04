@@ -26,6 +26,12 @@ function! s:CollapseMultipleBlankLines() abort
   endif
 endfunction
 
+function! topiary#CheckIsList(variable) abort
+  if type(a:variable) != type([])
+    echo 'Error:' a:variable 'must be a list'
+  endif
+endfunction
+
 function! topiary#TrimWhitespace() abort
   if s:InList(&filetype, g:topiary_ft_disabled)
     return

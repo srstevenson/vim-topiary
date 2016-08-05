@@ -26,9 +26,9 @@ function! s:CollapseMultipleBlankLines() abort
   endif
 endfunction
 
-function! topiary#CheckIsList(variable) abort
+function! topiary#CheckIsList(variable, name) abort
   if type(a:variable) != type([])
-    echomsg 'Error:' a:variable 'must be a list'
+    echomsg 'Error:' a:name 'must be a list'
   endif
 endfunction
 

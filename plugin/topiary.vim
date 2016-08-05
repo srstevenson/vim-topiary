@@ -9,13 +9,14 @@ else
 endif
 
 if exists('g:topiary_ft_disabled')
-  call topiary#CheckIsList('g:topiary_ft_disabled')
+  call topiary#CheckIsList(g:topiary_ft_disabled, 'g:topiary_ft_disabled')
 else
   let g:topiary_ft_disabled = ['diff']
 endif
 
 if exists('g:topiary_ft_allow_two_blank_lines')
-  call topiary#CheckIsList('g:topiary_ft_allow_two_blank_lines')
+  call topiary#CheckIsList(g:topiary_ft_allow_two_blank_lines,
+        \ 'g:topiary_ft_allow_two_blank_lines')
 else
   let g:topiary_ft_allow_two_blank_lines = ['python']
 endif

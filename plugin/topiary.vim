@@ -4,9 +4,8 @@
 
 if exists('g:loaded_topiary') || &compatible
   finish
-else
-  let g:loaded_topiary = 1
 endif
+let g:loaded_topiary = 1
 
 if exists('g:topiary_ft_disabled')
   call topiary#CheckIsList(g:topiary_ft_disabled, 'g:topiary_ft_disabled')

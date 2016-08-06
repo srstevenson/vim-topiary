@@ -66,6 +66,6 @@ vim-topiary is distributed under the terms of the [ISC licence].
 [Dein.vim]: https://github.com/Shougo/dein.vim
 [ISC licence]: https://opensource.org/licenses/ISC
 [Scott Stevenson]: https://scott.stevenson.io
-[Vundle]: https://github.com/VundleVim/Vundle.vim
 [vim-plug]: https://github.com/junegunn/vim-plug
 [vim-topiary]: https://github.com/srstevenson/vim-topiary
+[Vundle]: https://github.com/VundleVim/Vundle.vim

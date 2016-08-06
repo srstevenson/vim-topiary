@@ -13,8 +13,9 @@ line.
 ## Installation
 
 To install vim-topiary using [vim-plug], add the following to your vimrc
-(`~/.vim/vimrc` for Vim and `${XDG_CONFIG_HOME:-~/.config}/nvim/init.vim` for
-Neovim), restart Vim, and run `:PlugInstall`:
+(`$HOME/.vim/vimrc` for Vim and
+`${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.vim` for Neovim), restart Vim, and
+run `:PlugInstall`:
 
 ```viml
 Plug 'srstevenson/vim-topiary'

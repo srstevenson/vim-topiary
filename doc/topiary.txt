@@ -1,4 +1,4 @@
-topiary.txt* Trim excess whitespace                                   *topiary*
+*topiary.txt* Trim excess whitespace                                     *topiary*
 
 ==============================================================================
 CONTENTS                                                      *topiary-contents*

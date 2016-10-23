@@ -7,22 +7,32 @@ function! s:InList(item, list) abort
 endfunction
 
 function! s:TrimEOLWhitespace() abort
+  " vint: -ProhibitCommandRelyOnUser -ProhibitCommandWithUnintendedSideEffect
   %s/\s\+$//e
+  " vint: +ProhibitCommandRelyOnUser +ProhibitCommandWithUnintendedSideEffect
 endfunction
 
 function! s:TrimLeadingBlankLines() abort
+  " vint: -ProhibitCommandRelyOnUser -ProhibitCommandWithUnintendedSideEffect
   %s/\%^\n\+//e
+  " vint: +ProhibitCommandRelyOnUser +ProhibitCommandWithUnintendedSideEffect
 endfunction
 
 function! s:TrimTrailingBlankLines() abort
+  " vint: -ProhibitCommandRelyOnUser -ProhibitCommandWithUnintendedSideEffect
   %s/\n\+\%$//e
+  " vint: +ProhibitCommandRelyOnUser +ProhibitCommandWithUnintendedSideEffect
 endfunction
 
 function! s:CollapseMultipleBlankLines() abort
   if s:InList(&filetype, g:topiary_ft_allow_two_blank_lines)
+    " vint: -ProhibitCommandRelyOnUser -ProhibitCommandWithUnintendedSideEffect
     %s/\n\{4,}/\r\r\r/e
+    " vint: +ProhibitCommandRelyOnUser +ProhibitCommandWithUnintendedSideEffect
   else
+    " vint: -ProhibitCommandRelyOnUser -ProhibitCommandWithUnintendedSideEffect
     %s/\n\{3,}/\r\r/e
+    " vint: +ProhibitCommandRelyOnUser +ProhibitCommandWithUnintendedSideEffect
   endif
 endfunction
 

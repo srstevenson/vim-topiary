@@ -35,6 +35,22 @@ Using [Vundle], add the following to your vimrc file, restart Vim, and run
 Plugin 'srstevenson/vim-topiary'
 ```
 
+If you have Vim 7.4.1840 or newer, you can use the [native package
+support][packages] instead of a plugin manager by cloning vim-topiary into a
+directory under [`packpath`][packpath]. For Vim:
+
+```sh
+git clone https://github.com/srstevenson/vim-topiary \
+    ~/.vim/pack/plugins/start/vim-topiary
+```
+
+For Neovim:
+
+```sh
+git clone https://github.com/srstevenson/vim-topiary \
+    ~/.config/nvim/pack/plugins/start/vim-topiary
+```
+
 ## Configuration
 
 To disable vim-topiary for specific filetypes, set `g:topiary_ft_disabled` in
@@ -65,6 +81,8 @@ vim-topiary is distributed under the terms of the [ISC licence].
 
 [Dein.vim]: https://github.com/Shougo/dein.vim
 [ISC licence]: https://opensource.org/licenses/ISC
+[packages]: https://vimhelp.appspot.com/repeat.txt.html#packages
+[packpath]: https://vimhelp.appspot.com/options.txt.html#%27packpath%27
 [Scott Stevenson]: https://scott.stevenson.io
 [vim-plug]: https://github.com/junegunn/vim-plug
 [vim-topiary]: https://github.com/srstevenson/vim-topiary

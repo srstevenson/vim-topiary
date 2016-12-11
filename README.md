@@ -48,7 +48,7 @@ For Neovim:
 
 ```sh
 git clone https://github.com/srstevenson/vim-topiary \
-    ~/.config/nvim/pack/plugins/start/vim-topiary
+    ${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/pack/plugins/start/vim-topiary
 ```
 
 ## Configuration

@@ -12,27 +12,15 @@ line.
 
 ## Installation
 
-To install vim-topiary using [vim-plug], add the following to your vimrc
-(`$HOME/.vim/vimrc` for Vim and
+If you already use a plugin manager such as [vim-plug], [Dein.vim], or
+[Vundle], install vim-topiary in the normal
+manner. Otherwise, the recommended plugin manager is [minpac]. Add the
+following to your vimrc (`$HOME/.vim/vimrc` for Vim and
 `${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.vim` for Neovim), restart Vim, and
-run `:PlugInstall`:
+run `:call minpac#update()`:
 
 ```viml
-Plug 'srstevenson/vim-topiary'
-```
-
-Using [Dein.vim], add the following to your vimrc file, restart Vim, and run
-`:call dein#install()`:
-
-```viml
-call dein#add('srstevenson/vim-topiary')
-```
-
-Using [Vundle], add the following to your vimrc file, restart Vim, and run
-`:PluginInstall`:
-
-```viml
-Plugin 'srstevenson/vim-topiary'
+call minpac#add('srstevenson/vim-topiary')
 ```
 
 If you have Vim 7.4.1840 or newer, you can use the [native package
@@ -81,6 +69,7 @@ vim-topiary is distributed under the terms of the [ISC licence].
 
 [Dein.vim]: https://github.com/Shougo/dein.vim
 [ISC licence]: https://opensource.org/licenses/ISC
+[minpac]: https://github.com/k-takata/minpac
 [packages]: https://vimhelp.appspot.com/repeat.txt.html#packages
 [packpath]: https://vimhelp.appspot.com/options.txt.html#%27packpath%27
 [Scott Stevenson]: https://scott.stevenson.io

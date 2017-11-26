@@ -70,8 +70,8 @@ vim-topiary is distributed under the terms of the [ISC licence].
 [Dein.vim]: https://github.com/Shougo/dein.vim
 [ISC licence]: https://opensource.org/licenses/ISC
 [minpac]: https://github.com/k-takata/minpac
-[packages]: https://vimhelp.appspot.com/repeat.txt.html#packages
-[packpath]: https://vimhelp.appspot.com/options.txt.html#%27packpath%27
+[packages]: https://neovim.io/doc/user/repeat.html#packages
+[packpath]: https://neovim.io/doc/user/options.html#'packpath'
 [Scott Stevenson]: https://scott.stevenson.io
 [vim-plug]: https://github.com/junegunn/vim-plug
 [vim-topiary]: https://github.com/srstevenson/vim-topiary

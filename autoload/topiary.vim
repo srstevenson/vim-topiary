@@ -73,17 +73,71 @@ function! topiary#CheckIsList(variable, name) abort
     endif
 endfunction
 
+function! topiary#CheckIsNumber(variable, name) abort
+    " Print an error message if variable is not of type Number.
+    "
+    " Parameters
+    " ----------
+    " variable : Any
+    "     Value of the variable.
+    " name : String
+    "     Name of the variable.
+    if type(a:variable) != type(0)
+        echomsg 'Error:' a:name 'must be a number'
+    endif
+endfunction
+
 function! topiary#TrimWhitespace() abort
-    " Trim whitespace from the current buffer, is buffer does not have a
-    " disabled filetype.
-    if s:InList(&filetype, g:topiary_ft_disabled)
-        return
+    " Trim whitespace from the current buffer, if vim-topiary is enabled in
+    " the buffer, or globally if there is no buffer local configuration, and
+    " if the buffer is not of a blacklisted filetype.
+    if exists('b:topiary_enabled')
+        let l:enabled = b:topiary_enabled
+    else
+        let l:enabled = g:topiary_enabled
     endif
 
-    let l:view = winsaveview()
-    call s:TrimEOLWhitespace()
-    call s:TrimLeadingBlankLines()
-    call s:TrimTrailingBlankLines()
-    call s:CollapseMultipleBlankLines()
-    call winrestview(l:view)
+    if l:enabled
+        if s:InList(&filetype, g:topiary_ft_disabled)
+            return
+        endif
+
+        let l:view = winsaveview()
+        call s:TrimEOLWhitespace()
+        call s:TrimLeadingBlankLines()
+        call s:TrimTrailingBlankLines()
+        call s:CollapseMultipleBlankLines()
+        call winrestview(l:view)
+    endif
+endfunction
+
+function! topiary#ToggleBuffer() abort
+    " Toggle whitespace trimming for the current buffer.
+    let l:enabled = !get(b:, 'topiary_enabled', g:topiary_enabled)
+    call setbufvar(bufnr(''), 'topiary_enabled', l:enabled)
+endfunction
+
+function! topiary#EnableBuffer() abort
+    " Enable whitespace trimming for the current buffer.
+    call setbufvar(bufnr(''), 'topiary_enabled', 1)
+endfunction
+
+function! topiary#DisableBuffer() abort
+    " Disable whitespace trimming for the current buffer.
+    call setbufvar(bufnr(''), 'topiary_enabled', 0)
+endfunction
+
+function! topiary#Toggle() abort
+    " Toggle whitespace trimming globally.
+    let g:topiary_enabled = !g:topiary_enabled
+endfunction
+
+function! topiary#Enable() abort
+    " Enable whitespace trimming globally.
+    let g:topiary_enabled = 1
+endfunction
+
+function! topiary#Disable() abort
+    " Disable whitespace trimming globally.
+    let g:topiary_enabled = 0
 endfunction

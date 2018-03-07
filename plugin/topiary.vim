@@ -7,6 +7,12 @@ if exists('g:loaded_topiary') || &compatible
 endif
 let g:loaded_topiary = 1
 
+if exists('g:topiary_enabled')
+    call topiary#CheckIsNumber(g:topiary_enabled, 'g:topiary_enabled')
+else
+    let g:topiary_enabled = 1
+endif
+
 if exists('g:topiary_ft_disabled')
     call topiary#CheckIsList(g:topiary_ft_disabled, 'g:topiary_ft_disabled')
 else
@@ -24,3 +30,11 @@ augroup topiary
     autocmd!
     autocmd BufWritePre * call topiary#TrimWhitespace()
 augroup END
+
+command -bar TopiaryDisable call topiary#Disable()
+command -bar TopiaryEnable call topiary#Enable()
+command -bar TopiaryToggle call topiary#Toggle()
+
+command -bar TopiaryDisableBuffer call topiary#DisableBuffer()
+command -bar TopiaryEnableBuffer call topiary#EnableBuffer()
+command -bar TopiaryToggleBuffer call topiary#ToggleBuffer()

@@ -38,3 +38,11 @@ command -bar TopiaryToggle call topiary#Toggle()
 command -bar TopiaryDisableBuffer call topiary#DisableBuffer()
 command -bar TopiaryEnableBuffer call topiary#EnableBuffer()
 command -bar TopiaryToggleBuffer call topiary#ToggleBuffer()
+
+nnoremap <silent> <Plug>TopiaryDisable :TopiaryDisable<CR>
+nnoremap <silent> <Plug>TopiaryEnable :TopiaryEnable<CR>
+nnoremap <silent> <Plug>TopiaryToggle :TopiaryToggle<CR>
+
+nnoremap <silent> <Plug>TopiaryDisableBuffer :TopiaryDisableBuffer<CR>
+nnoremap <silent> <Plug>TopiaryEnableBuffer :TopiaryEnableBuffer<CR>
+nnoremap <silent> <Plug>TopiaryToggleBuffer :TopiaryToggleBuffer<CR>

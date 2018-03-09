@@ -39,6 +39,31 @@ git clone https://github.com/srstevenson/vim-topiary \
     ${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/pack/plugins/start/vim-topiary
 ```
 
+## Commands
+
+vim-topiary provides the following commands:
+
+* `:TopiaryEnable`: Enable whitespace trimming globally.
+* `:TopiaryDisable`: Disable whitespace trimming globally.
+* `:TopiaryToggle`: Toggle whitespace trimming globally.
+* `:TopiaryEnableBuffer`: Enable whitespace trimming for the current buffer.
+* `:TopiaryDisableBuffer`: Disable whitespace trimming for the current buffer.
+* `:TopiaryToggleBuffer`: Toggle whitespace trimming for the current buffer.
+
+## Key mappings
+
+vim-topiary defines the following [`<Plug>`][plug-mappings] mappings:
+
+* `<Plug>TopiaryEnable`: Execute `:TopiaryEnable`.
+* `<Plug>TopiaryDisable`: Execute `:TopiaryDisable`.
+* `<Plug>TopiaryToggle`: Execute `:TopiaryToggle`.
+* `<Plug>TopiaryEnableBuffer`: Execute `:TopiaryEnableBuffer`.
+* `<Plug>TopiaryDisableBuffer`: Execute `:TopiaryDisableBuffer`.
+* `<Plug>TopiaryToggleBuffer`: Execute `:TopiaryToggleBuffer`.
+
+These are not mapped to key sequences, to allow you to choose those that best
+fit your workflow and don't conflict with other plugins you use.
+
 ## Configuration
 
 To disable vim-topiary for specific filetypes, set `g:topiary_ft_disabled` in
@@ -72,6 +97,7 @@ vim-topiary is distributed under the terms of the [ISC licence].
 [minpac]: https://github.com/k-takata/minpac
 [packages]: https://neovim.io/doc/user/repeat.html#packages
 [packpath]: https://neovim.io/doc/user/options.html#'packpath'
+[plug-mappings]: https://neovim.io/doc/user/map.html#%3CPlug%3E
 [Scott Stevenson]: https://scott.stevenson.io
 [vim-plug]: https://github.com/junegunn/vim-plug
 [vim-topiary]: https://github.com/srstevenson/vim-topiary

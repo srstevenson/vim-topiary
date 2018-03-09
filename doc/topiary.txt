@@ -4,9 +4,11 @@
 CONTENTS                                                      *topiary-contents*
 
     1. About ..................................|topiary-about|
-    2. Configuration ..........................|topiary-configuration|
-    3. Issues .................................|topiary-issues|
-    4. Licence ................................|topiary-licence|
+    2. Commands ...............................|topiary-commands|
+    3. Mappings ...............................|topiary-mappings|
+    4. Configuration ..........................|topiary-configuration|
+    5. Issues .................................|topiary-issues|
+    6. Licence ................................|topiary-licence|
 
 ==============================================================================
 ABOUT                                                            *topiary-about*
@@ -20,6 +22,41 @@ whitespace are removed:
 
 Additionally, multiple consecutive blank lines are collapsed to a single blank
 line.
+
+==============================================================================
+COMMANDS                                                      *topiary-commands*
+
+vim-topiary provides the following commands:
+
+                                                       *topiary-:TopiaryDisable*
+:TopiaryDisable         Disable whitespace trimming globally.
+
+                                                        *topiary-:TopiaryEnable*
+:TopiaryEnable          Enable whitespace trimming globally.
+
+                                                        *topiary-:TopiaryToggle*
+:TopiaryToggle          Toggle whitespace trimming globally.
+
+                                                 *topiary-:TopiaryDisableBuffer*
+:TopiaryDisableBuffer   Disable whitespace trimming for the current buffer.
+
+                                                  *topiary-:TopiaryEnableBuffer*
+:TopiaryEnableBuffer    Enable whitespace trimming for the current buffer.
+
+                                                  *topiary-:TopiaryToggleBuffer*
+:TopiaryToggleBuffer    Toggle whitespace trimming for the current buffer.
+
+==============================================================================
+MAPPINGS                                                      *topiary-mappings*
+
+vim-topiary provides the following |<Plug>| mappings:
+
+<Plug>TopiaryDisable        Execute :TopiaryDisable
+<Plug>TopiaryEnable         Execute :TopiaryEnable
+<Plug>TopiaryToggle         Execute :TopiaryToggle
+<Plug>TopiaryDisableBuffer  Execute :TopiaryDisableBuffer
+<Plug>TopiaryEnableBuffer   Execute :TopiaryEnableBuffer
+<Plug>TopiaryToggleBuffer   Execute :TopiaryToggleBuffer
 
 ==============================================================================
 CONFIGURATION                                            *topiary-configuration*

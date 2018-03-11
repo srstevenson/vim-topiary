@@ -69,7 +69,7 @@ function! topiary#CheckIsList(variable, name) abort
     " name : String
     "     Name of the variable.
     if type(a:variable) != type([])
-        echomsg 'Error:' a:name 'must be a list'
+        echoerr 'vim-topiary:' a:name 'must be a list'
     endif
 endfunction
 
@@ -83,7 +83,7 @@ function! topiary#CheckIsNumber(variable, name) abort
     " name : String
     "     Name of the variable.
     if type(a:variable) != type(0)
-        echomsg 'Error:' a:name 'must be a number'
+        echoerr 'vim-topiary:' a:name 'must be a number'
     endif
 endfunction
 

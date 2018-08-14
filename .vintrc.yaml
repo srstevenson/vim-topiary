@@ -1,4 +1,4 @@
 cmdargs:
-  severity: style_problem
   env:
     neovim: true
+  severity: style_problem

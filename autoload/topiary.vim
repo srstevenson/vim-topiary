@@ -15,7 +15,7 @@ function! s:InList(item, list) abort
     " Returns
     " -------
     " Number
-    "     1 if item is in list, 0 otherwise.
+    "     v:true if item is in list, v:false otherwise.
     return index(a:list, a:item) >= 0
 endfunction
 

@@ -59,34 +59,6 @@ function! s:CollapseMultipleBlankLines() abort
     endif
 endfunction
 
-function! topiary#CheckIsList(variable, name) abort
-    " Print an error message if variable is not of type List.
-    "
-    " Parameters
-    " ----------
-    " variable : Any
-    "     Value of the variable.
-    " name : String
-    "     Name of the variable.
-    if type(a:variable) != type([])
-        echoerr 'vim-topiary:' a:name 'must be a list'
-    endif
-endfunction
-
-function! topiary#CheckIsNumber(variable, name) abort
-    " Print an error message if variable is not of type Number.
-    "
-    " Parameters
-    " ----------
-    " variable : Any
-    "     Value of the variable.
-    " name : String
-    "     Name of the variable.
-    if type(a:variable) != type(0)
-        echoerr 'vim-topiary:' a:name 'must be a number'
-    endif
-endfunction
-
 function! topiary#TrimWhitespace() abort
     " Trim whitespace from the current buffer, if vim-topiary is enabled in
     " the buffer, or globally if there is no buffer local configuration, and

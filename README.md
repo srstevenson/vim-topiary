@@ -28,14 +28,14 @@ directory under [`packpath`][packpath]. For Vim:
 
 ```sh
 git clone https://github.com/srstevenson/vim-topiary \
-    ~/.vim/pack/plugins/start/vim-topiary
+  ~/.vim/pack/plugins/start/vim-topiary
 ```
 
 For Neovim:
 
 ```sh
 git clone https://github.com/srstevenson/vim-topiary \
-    ${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/pack/plugins/start/vim-topiary
+  ${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/pack/plugins/start/vim-topiary
 ```
 
 ## Commands

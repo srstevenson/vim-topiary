@@ -2,7 +2,7 @@
 " Maintainer: Scott Stevenson <scott@stevenson.io>
 " Source:     https://github.com/srstevenson/vim-topiary
 
-function! s:InList(item, list) abort
+function! s:in_list(item, list) abort
   " Determine if item is in list.
   "
   " Parameters
@@ -19,7 +19,7 @@ function! s:InList(item, list) abort
   return index(a:list, a:item) >= 0
 endfunction
 
-function! s:TrimEOLWhitespace() abort
+function! s:trim_eol_whitespace() abort
   " Delete whitespace from the end of every line in the buffer.
 
   " vint: -ProhibitCommandRelyOnUser -ProhibitCommandWithUnintendedSideEffect
@@ -27,7 +27,7 @@ function! s:TrimEOLWhitespace() abort
   " vint: +ProhibitCommandRelyOnUser +ProhibitCommandWithUnintendedSideEffect
 endfunction
 
-function! s:TrimLeadingBlankLines() abort
+function! s:trim_leading_blank_lines() abort
   " Delete blank lines from the head of the buffer.
 
   " vint: -ProhibitCommandRelyOnUser -ProhibitCommandWithUnintendedSideEffect
@@ -35,7 +35,7 @@ function! s:TrimLeadingBlankLines() abort
   " vint: +ProhibitCommandRelyOnUser +ProhibitCommandWithUnintendedSideEffect
 endfunction
 
-function! s:TrimTrailingBlankLines() abort
+function! s:trim_trailing_blank_lines() abort
   " Delete blank lines from the tail of the buffer.
 
   " vint: -ProhibitCommandRelyOnUser -ProhibitCommandWithUnintendedSideEffect
@@ -43,12 +43,12 @@ function! s:TrimTrailingBlankLines() abort
   " vint: +ProhibitCommandRelyOnUser +ProhibitCommandWithUnintendedSideEffect
 endfunction
 
-function! s:CollapseMultipleBlankLines() abort
+function! s:collapse_multiple_blank_lines() abort
   " Collapse multiple blank lines to a single blank line if filetype
   " is not in g:topiary_ft_allow_two_blank_lines, else collapse more
   " than two blank lines to two blank lines.
 
-  if s:InList(&filetype, g:topiary_ft_allow_two_blank_lines)
+  if s:in_list(&filetype, g:topiary_ft_allow_two_blank_lines)
     " vint: -ProhibitCommandRelyOnUser -ProhibitCommandWithUnintendedSideEffect
     %s/\n\{4,}/\r\r\r/e
     " vint: +ProhibitCommandRelyOnUser +ProhibitCommandWithUnintendedSideEffect
@@ -70,15 +70,15 @@ function! topiary#TrimWhitespace() abort
   endif
 
   if l:enabled
-    if s:InList(&filetype, g:topiary_ft_disabled)
+    if s:in_list(&filetype, g:topiary_ft_disabled)
       return
     endif
 
     let l:view = winsaveview()
-    call s:TrimEOLWhitespace()
-    call s:TrimLeadingBlankLines()
-    call s:TrimTrailingBlankLines()
-    call s:CollapseMultipleBlankLines()
+    call s:trim_eol_whitespace()
+    call s:trim_leading_blank_lines()
+    call s:trim_trailing_blank_lines()
+    call s:collapse_multiple_blank_lines()
     call winrestview(l:view)
   endif
 endfunction

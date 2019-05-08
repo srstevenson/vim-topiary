@@ -1,4 +1,4 @@
-# vim-topiary [![Build Status](https://travis-ci.org/srstevenson/vim-topiary.svg?branch=master)](https://travis-ci.org/srstevenson/vim-topiary)
+# vim-topiary
 
 [vim-topiary] trims excess whitespace from buffers on save. Three types of
 whitespace are removed:

@@ -18,7 +18,7 @@ manager is [minpac]. Add the following to your vimrc (`$HOME/.vim/vimrc` for Vim
 and `${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.vim` for Neovim), restart Vim,
 and run `:call minpac#update()`:
 
-```viml
+```vim
 call minpac#add('srstevenson/vim-topiary')
 ```
 
@@ -69,7 +69,7 @@ To disable vim-topiary for specific filetypes, set `g:topiary_ft_disabled` in
 your vimrc file to a list of filetypes. By default vim-topiary is disabled in
 diff buffers:
 
-```viml
+```vim
 let g:topiary_ft_disabled = ['diff']
 ```
 
@@ -81,7 +81,7 @@ behaviour for specific filetypes by setting `g:topiary_ft_allow_two_blank_lines`
 in your vimrc to a list of filetypes. By default this is enabled in Python
 buffers:
 
-```viml
+```vim
 let g:topiary_ft_allow_two_blank_lines = ['python']
 ```
 

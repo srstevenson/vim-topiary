@@ -87,7 +87,7 @@ let g:topiary_ft_allow_two_blank_lines = ['python']
 
 ## Copyright
 
-Copyright © 2016-2019 [Scott Stevenson].
+Copyright © 2016-2020 [Scott Stevenson].
 
 vim-topiary is distributed under the terms of the [ISC licence].
 

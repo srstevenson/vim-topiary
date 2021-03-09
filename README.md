@@ -1,5 +1,8 @@
 # vim-topiary
 
+[![Licence](https://img.shields.io/github/license/srstevenson/vim-topiary?label=Licence&color=blue)](https://github.com/srstevenson/vim-topiary/blob/main/LICENCE)
+[![CI status](https://github.com/srstevenson/vim-topiary/workflows/CI/badge.svg)](https://github.com/srstevenson/vim-topiary/actions)
+
 [vim-topiary] trims excess whitespace from buffers on save. Three types of
 whitespace are removed:
 
@@ -87,7 +90,7 @@ let g:topiary_ft_allow_two_blank_lines = ['python']
 
 ## Copyright
 
-Copyright © 2016-2020 [Scott Stevenson].
+Copyright © 2016-2021 [Scott Stevenson].
 
 vim-topiary is distributed under the terms of the [ISC licence].
 

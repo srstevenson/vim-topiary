@@ -1,4 +1,4 @@
-# vim-topiary
+<p align="center"><img src="images/vim-topiary.png" width=300></p>
 
 [![Licence](https://img.shields.io/github/license/srstevenson/vim-topiary?label=Licence&color=blue)](https://github.com/srstevenson/vim-topiary/blob/main/LICENCE)
 [![CI status](https://github.com/srstevenson/vim-topiary/workflows/CI/badge.svg)](https://github.com/srstevenson/vim-topiary/actions)

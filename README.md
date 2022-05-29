@@ -77,12 +77,11 @@ let g:topiary_ft_disabled = ['diff']
 ```
 
 You may not want to collapse multiple blank lines in all filetypes. For example
-in Python top-level function and class definitions should be surrounded with two
-blank lines. In this case only three or more consecutive blank lines should be
-collapsed, and to two blank lines rather than one. You can specify this
-behaviour for specific filetypes by setting `g:topiary_ft_allow_two_blank_lines`
-in your vimrc to a list of filetypes. By default this is enabled in Python
-buffers:
+in Python top-level function and class definitions should be surrounded by two
+blank lines. In this case, only three or more consecutive blank lines should be
+collapsed and to two blank lines rather than one. You can specify this behaviour
+for specific filetypes by setting `g:topiary_ft_allow_two_blank_lines` in your
+vimrc to a list of filetypes. By default this is enabled in Python buffers:
 
 ```vim
 let g:topiary_ft_allow_two_blank_lines = ['python']
